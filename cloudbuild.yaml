@@ -3,6 +3,6 @@ steps:
     args: ["install", "github.com/devtoolsmith/gcp-cd-codelab"]
     env: ["PROJECT_ROOT=github.com/devtoolsmith/gcp-cd-codelab"]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/795451823639/gcp-cd-codelab:$REVISION_ID", "-f", "Dockerfile", "."]
+    args: ["build", "-t", "gcr.io/turbonomic-eng/gcp-cd-codelab:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
   - "gcr.io/{GCP_PROJECT_ID}/gcp-cd-codelab:$REVISION_ID"
